@@ -1,9 +1,26 @@
 body {
 	margin: 0;
-	padding: 0;
+	padding-bottom: 180px;
 	font: 20px/1.6 Arial, sans-serif;
 	background: #219653;
-	color: #fff;
+	color: #250d6d;
+}
+
+.page-header {
+	text-align: center;
+	padding: 1.5rem 1rem;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #6d4bd4de;
+	position: absolute;
+	z-index: 10;
+}
+
+.page-header h1 {
+	margin: 0;
+	font-size: 3rem;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .mountains {
@@ -11,7 +28,7 @@ body {
 	overflow: hidden;
 	width: 100%;
 	padding-bottom: 73%;
-	background-color: rgb(92, 200, 253);
+	background-color: #219653;
 }
 
 .mountains-slide {
@@ -26,20 +43,20 @@ body {
 }
 
 .mountains-slide-1 {
-	background-image: url(img/6223532.jpg);
+	background-image: url('img/6223532.jpg');
 	top: -15%;
 }
 .mountains-slide-2 {
-	background-image: url(img/2.png);
+	background-image: url('img/2.png');
 }
 .mountains-slide-3 {
-	background-image: url(img/Foreground.png);
+	background-image: url('img/Foreground.png');
 }
 .mountains-slide-4 {
-	/* background-image: url(img/Sun.png); */
+	/* background-image: url(img/black.png); */
 }
 .mountains-slide-5 {
-	background-image: url(img/3.png);
+	background-image: url('img/3.png');
 	top: -60%;
 }
 .mountains-slide-6 {
@@ -77,4 +94,24 @@ hgroup h2 {
 	text-transform: uppercase;
 	font-weight: normal;
 	letter-spacing: 0.2em;
+}
+
+.footer-img {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	background-image: url('img/mou.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0.7s ease;
+	pointer-events: none; /* чтобы не мешал кликам чтобы параллакс нормально работал при наведении мышкой*/
+}
+.footer-img.visible {
+	opacity: 0.6;
+	pointer-events: auto;
 }
